@@ -54,5 +54,5 @@ Point the agent at a full DataHub backend and replace the Lite reads with offici
 
 ## Links
 
-- GitHub: TODO
+- GitHub: https://github.com/TheodorNEngoy/datahub-security-signal-agent
 - Demo video: TODO
