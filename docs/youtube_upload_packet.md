@@ -1,6 +1,6 @@
 # YouTube/Vimeo Upload Packet
 
-Use this for the required public demo video upload before pasting the final URL into Devpost.
+This records the public demo video upload used for the Devpost submission.
 
 ## File
 
@@ -29,9 +29,11 @@ Current boundary: the official `mcp-server-datahub` and `datahub-agent-context` 
 - Paid promotion: No
 - Tags: DataHub, AgentHack, data governance, metadata, security, AI agents
 
-## After Upload
+## Published URL
 
-Replace the `Demo video: TODO` line in `docs/devpost_copy.md` with the final public YouTube or Vimeo URL, then rerun:
+https://www.youtube.com/watch?v=KY4GNaZrHz0
+
+## Verification
 
 ```bash
 PATH="$PWD/.venv/bin:$PATH" HOME="$PWD/home" python scripts/verify_submission_ready.py
