@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import json
-import time
 from pathlib import Path
 
 from datahub.emitter.mcp import MetadataChangeProposalWrapper
@@ -161,12 +160,8 @@ def main() -> None:
         )
     )
 
-    # Add a generated timestamp as metadata only, not as security evidence.
-    for record in records:
-        record.setdefault("headers", {})["generated_at_epoch_ms"] = str(int(time.time() * 1000))
-
     out.write_text(json.dumps(records, indent=2) + "\n")
-    print(f"Wrote {len(records)} MCP records to {out}")
+    print(f"Wrote {len(records)} Metadata Change Proposal records to {out}")
 
 
 if __name__ == "__main__":

@@ -15,13 +15,13 @@ Security Signal Agent turns DataHub metadata into a prioritized governance findi
 
 ## Honest boundary
 
-This spike currently uses DataHub Lite because the public DataHub demo does not expose anonymous GMS/GraphQL API access. A full local DataHub Docker quickstart was attempted after freeing the approved Splunk Docker artifacts and compacting Colima, but the pull still exhausted the practical disk budget before the backend stack finished. The official `mcp-server-datahub` and `datahub-agent-context` packages are installed and verified, but their full tool path needs a full DataHub backend or valid token.
+This prototype currently uses DataHub Lite because the public DataHub demo does not expose anonymous GMS/GraphQL API access. A full local DataHub Docker quickstart was attempted after freeing the approved Docker artifacts and compacting Colima, but the pull still exhausted the practical disk budget before the backend stack finished. The official `mcp-server-datahub` and `datahub-agent-context` packages are installed as dependencies, but their full tool path needs a full DataHub backend or valid token and was not run end-to-end in this local proof.
 
 ## Why it fits the hackathon
 
 - Uses DataHub metadata as the source of truth for ownership, schema tags, freshness, and lineage.
 - Demonstrates an agentic workflow: gather context, join risk signals, rank findings, and return a concise action list.
-- Clean-room Apache-2.0 code path; no proprietary Evil Sift files.
+- Clean-room Apache-2.0 code path; no proprietary code or data included.
 
 ## Best next upgrade
 

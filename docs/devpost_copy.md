@@ -8,7 +8,7 @@ DataHub Security Signal Agent
 
 ## Tagline
 
-Turns DataHub metadata into a prioritized security-governance finding.
+An agent that reads DataHub metadata - PII tags, ownership, freshness, lineage - and ranks datasets into a prioritized, explainable security review queue.
 
 ## Inspiration
 
@@ -16,7 +16,7 @@ Security review often happens outside the metadata catalog, even though DataHub 
 
 ## What It Does
 
-The prototype builds a clean-room DataHub Lite catalog with four synthetic warehouse datasets, then runs a read-only agent that ranks datasets by governance/security risk.
+A read-only agent ranks every dataset in a DataHub catalog by security-governance risk and explains each ranking from the exact metadata signals that triggered it. The demo runs against a clean-room DataHub Lite catalog of four synthetic warehouse datasets - one command, no cloud account.
 
 The demo finding is deterministic: `warehouse.raw_customer_profiles` is ranked HIGH because it combines PII-tagged fields, no registered owner, stale freshness metadata, and downstream lineage.
 
@@ -29,13 +29,17 @@ The demo finding is deterministic: `warehouse.raw_customer_profiles` is ranked H
 
 ## Use Of DataHub
 
-DataHub is the source of truth for the agent's context: dataset entities, schema field tags, ownership, dataset properties, and lineage. The current runnable demo uses DataHub Lite because anonymous public-demo GMS/GraphQL access was not available and the local machine could not complete full Docker quickstart within its disk budget.
+DataHub is the source of truth for the agent's context: dataset entities, schema field tags, ownership, dataset properties, and lineage. The runnable demo uses DataHub Lite so the full metadata round trip - SDK-generated metadata, ingestion, then agent reads - is reproducible in one command with no cloud account, credentials, or Docker stack.
 
 The official `mcp-server-datahub` and `datahub-agent-context` packages are installed in the project environment and documented as the next integration path once a full DataHub backend or valid token is available.
 
+## Built With
+
+python, datahub, datahub-lite, acryl-datahub-sdk
+
 ## Challenges
 
-The main challenge was keeping the submission honest and no-spend. Public demo UI access worked, but API/GMS access required authentication. Full local DataHub quickstart was attempted after Docker cleanup, but image pulls drove the Mac near full disk before the stack completed. The project therefore ships a reliable DataHub Lite demo and documents the full-backend upgrade path instead of claiming an unverified MCP integration.
+The main challenge was keeping the submission honest and no-spend. Within a strict no-spend, no-credentials constraint, we could not verify the official MCP server end-to-end: the hosted demo requires authenticated API access, and a full local quickstart was not feasible in the build environment. The project therefore ships a reliable DataHub Lite demo and documents the full-backend upgrade path instead of claiming an unverified MCP integration.
 
 ## Accomplishments
 
@@ -46,7 +50,7 @@ The main challenge was keeping the submission honest and no-spend. Public demo U
 
 ## What Is Next
 
-Use a valid no-cost DataHub backend or free enough local disk for full quickstart, then replace Lite reads with official `mcp-server-datahub` / Agent Context Kit calls such as `search`, `get_entities`, and `get_lineage`. After that, add an opt-in write-back path that creates a DataHub document, tag, or ownership task for accepted findings.
+Point the agent at a full DataHub backend and replace the Lite reads with official `mcp-server-datahub` / Agent Context Kit calls such as `search`, `get_entities`, and `get_lineage`. After that, add an opt-in write-back path that creates a DataHub document, tag, or ownership task for accepted findings.
 
 ## Links
 

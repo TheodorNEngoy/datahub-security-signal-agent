@@ -44,14 +44,23 @@ def check_claim_boundaries() -> list[str]:
     docs = [
         ROOT / "README.md",
         ROOT / "SUBMISSION_NOTES.md",
+        ROOT / "docs" / "devpost_copy.md",
+        ROOT / "docs" / "full_backend_attempt.md",
         ROOT / "docs" / "demo_video_script.md",
         ROOT / "docs" / "architecture_diagram.md",
     ]
+    sensitive_project_name = "Evil" + " Sift"
+    internal_verdict_token = "HUNT" + "_NOW_BOUNDED"
+    local_user_path = "/Users/" + "theodornengoy"
     forbidden_claims = [
         "official MCP tools ran",
         "official DataHub MCP tools ran",
         "full DataHub backend works locally",
         "public demo MCP access works",
+        "installed and verified",
+        sensitive_project_name,
+        internal_verdict_token,
+        local_user_path,
     ]
     for path in docs:
         text = path.read_text()

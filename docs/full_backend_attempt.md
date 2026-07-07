@@ -8,14 +8,14 @@ Verify whether the prototype can be upgraded from DataHub Lite CLI/REST reads to
 
 ## What Was Tried
 
-1. Removed the approved stopped Splunk Docker container, `splunk/splunk:latest` image, and the two anonymous Splunk volumes.
+1. Removed unused local Docker artifacts from a previous project to free disk.
 2. Trimmed the Colima disk, recovering host free space to about 12 GiB.
 3. Installed workspace-local Docker Compose v2.39.4 and verified its SHA256.
 4. Increased Colima from 2 GiB to 6 GiB memory after DataHub quickstart rejected the lower Docker memory allocation.
 5. Started:
 
 ```bash
-DOCKER_HOST="unix:///Users/theodornengoy/.colima/default/docker.sock" \
+DOCKER_HOST="unix://$HOME/.colima/default/docker.sock" \
 PATH="$PWD/bin:$PWD/.venv/bin:$PATH" \
 HOME="$PWD/home" \
 datahub docker quickstart --version stable --pull-images --accept-version-default --arch arm64 --dump-logs-on-failure
@@ -27,11 +27,11 @@ The quickstart began pulling the v1.6.0 stack (`mysql`, `datahub-actions`, `open
 
 The run was aborted at the disk-risk stop line. Partial DataHub Docker images were removed and Docker was pruned back to an empty state.
 
-## Evidence
+## Source Evidence
 
 - `mcp-server-datahub==0.6.0` installed successfully.
 - `datahub-agent-context==1.6.0.10` installed successfully.
-- `mcp-server-datahub` starts by creating `DataHubClient.from_env(...)`.
+- The `mcp-server-datahub` entrypoint source shows it creates `DataHubClient.from_env(...)`.
 - Agent Context builders require a `DataHubClient`.
 - Therefore the official tools need a real DataHub backend URL/token or a completed local quickstart stack.
 
