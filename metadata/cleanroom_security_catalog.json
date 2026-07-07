@@ -1,0 +1,327 @@
+[
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_customer_profiles,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "status",
+    "aspect": {
+      "value": "{\"removed\": false}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_customer_profiles,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "datasetProperties",
+    "aspect": {
+      "value": "{\"customProperties\": {\"freshness_slo_hours\": \"24\", \"last_observed_hours_ago\": \"96\", \"control_plane\": \"clean-room-agenthack\"}, \"name\": \"warehouse.raw_customer_profiles\", \"description\": \"Raw customer profile table. Contains email and SSN-like sample fields; owner intentionally missing.\", \"tags\": []}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_customer_profiles,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "schemaMetadata",
+    "aspect": {
+      "value": "{\"schemaName\": \"warehouse.raw_customer_profiles\", \"platform\": \"urn:li:dataPlatform:postgres\", \"version\": 0, \"created\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"hash\": \"\", \"platformSchema\": {\"com.linkedin.schema.OtherSchema\": {\"rawSchema\": \"clean-room hackathon schema\"}}, \"fields\": [{\"fieldPath\": \"customer_id\", \"nullable\": true, \"description\": \"Stable customer identifier\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"isPartOfKey\": false}, {\"fieldPath\": \"email\", \"nullable\": true, \"description\": \"PII-tagged email address\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"globalTags\": {\"tags\": [{\"tag\": \"urn:li:tag:PII\"}]}, \"isPartOfKey\": false}, {\"fieldPath\": \"ssn_last4\", \"nullable\": true, \"description\": \"PII-tagged synthetic SSN suffix\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"globalTags\": {\"tags\": [{\"tag\": \"urn:li:tag:PII\"}]}, \"isPartOfKey\": false}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_customer_profiles,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "browsePathsV2",
+    "aspect": {
+      "value": "{\"path\": [{\"id\": \"prod\"}, {\"id\": \"security-governance\"}, {\"id\": \"warehouse.raw_customer_profiles\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_customer_profiles,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "globalTags",
+    "aspect": {
+      "value": "{\"tags\": [{\"tag\": \"urn:li:tag:security_review\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "status",
+    "aspect": {
+      "value": "{\"removed\": false}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "datasetProperties",
+    "aspect": {
+      "value": "{\"customProperties\": {\"freshness_slo_hours\": \"24\", \"last_observed_hours_ago\": \"6\", \"control_plane\": \"clean-room-agenthack\"}, \"name\": \"warehouse.raw_orders\", \"description\": \"Raw orders table. Owned by analytics-eng and refreshed within SLO.\", \"tags\": []}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "schemaMetadata",
+    "aspect": {
+      "value": "{\"schemaName\": \"warehouse.raw_orders\", \"platform\": \"urn:li:dataPlatform:postgres\", \"version\": 0, \"created\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"hash\": \"\", \"platformSchema\": {\"com.linkedin.schema.OtherSchema\": {\"rawSchema\": \"clean-room hackathon schema\"}}, \"fields\": [{\"fieldPath\": \"order_id\", \"nullable\": true, \"description\": \"Order identifier\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"isPartOfKey\": false}, {\"fieldPath\": \"customer_id\", \"nullable\": true, \"description\": \"Foreign key to raw_customer_profiles\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"isPartOfKey\": false}, {\"fieldPath\": \"total_amount\", \"nullable\": true, \"description\": \"Order total\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"decimal\", \"recursive\": false, \"isPartOfKey\": false}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "browsePathsV2",
+    "aspect": {
+      "value": "{\"path\": [{\"id\": \"prod\"}, {\"id\": \"security-governance\"}, {\"id\": \"warehouse.raw_orders\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "globalTags",
+    "aspect": {
+      "value": "{\"tags\": [{\"tag\": \"urn:li:tag:security_review\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "ownership",
+    "aspect": {
+      "value": "{\"owners\": [{\"owner\": \"urn:li:corpuser:analytics_eng\", \"type\": \"DATAOWNER\"}], \"ownerTypes\": {}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "status",
+    "aspect": {
+      "value": "{\"removed\": false}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "datasetProperties",
+    "aspect": {
+      "value": "{\"customProperties\": {\"freshness_slo_hours\": \"24\", \"last_observed_hours_ago\": \"6\", \"control_plane\": \"clean-room-agenthack\"}, \"name\": \"warehouse.customer_risk_features\", \"description\": \"Feature table consumed by downstream risk scoring. Inherits PII from raw profiles.\", \"tags\": []}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "schemaMetadata",
+    "aspect": {
+      "value": "{\"schemaName\": \"warehouse.customer_risk_features\", \"platform\": \"urn:li:dataPlatform:postgres\", \"version\": 0, \"created\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"hash\": \"\", \"platformSchema\": {\"com.linkedin.schema.OtherSchema\": {\"rawSchema\": \"clean-room hackathon schema\"}}, \"fields\": [{\"fieldPath\": \"customer_id\", \"nullable\": true, \"description\": \"Customer identifier\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"isPartOfKey\": false}, {\"fieldPath\": \"email_domain\", \"nullable\": true, \"description\": \"Derived from email; still privacy-sensitive\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"varchar\", \"recursive\": false, \"globalTags\": {\"tags\": [{\"tag\": \"urn:li:tag:PII\"}]}, \"isPartOfKey\": false}, {\"fieldPath\": \"risk_score\", \"nullable\": true, \"description\": \"Model feature\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"double\", \"recursive\": false, \"isPartOfKey\": false}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "browsePathsV2",
+    "aspect": {
+      "value": "{\"path\": [{\"id\": \"prod\"}, {\"id\": \"security-governance\"}, {\"id\": \"warehouse.customer_risk_features\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "globalTags",
+    "aspect": {
+      "value": "{\"tags\": [{\"tag\": \"urn:li:tag:security_review\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "ownership",
+    "aspect": {
+      "value": "{\"owners\": [{\"owner\": \"urn:li:corpuser:ml_platform\", \"type\": \"DATAOWNER\"}], \"ownerTypes\": {}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.customer_risk_features,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "upstreamLineage",
+    "aspect": {
+      "value": "{\"upstreams\": [{\"auditStamp\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"dataset\": \"urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_customer_profiles,PROD)\", \"type\": \"TRANSFORMED\"}, {\"auditStamp\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"dataset\": \"urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)\", \"type\": \"TRANSFORMED\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "status",
+    "aspect": {
+      "value": "{\"removed\": false}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "datasetProperties",
+    "aspect": {
+      "value": "{\"customProperties\": {\"freshness_slo_hours\": \"24\", \"last_observed_hours_ago\": \"6\", \"control_plane\": \"clean-room-agenthack\"}, \"name\": \"warehouse.public_revenue_summary\", \"description\": \"Public dashboard rollup without direct PII fields.\", \"tags\": []}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "schemaMetadata",
+    "aspect": {
+      "value": "{\"schemaName\": \"warehouse.public_revenue_summary\", \"platform\": \"urn:li:dataPlatform:postgres\", \"version\": 0, \"created\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"hash\": \"\", \"platformSchema\": {\"com.linkedin.schema.OtherSchema\": {\"rawSchema\": \"clean-room hackathon schema\"}}, \"fields\": [{\"fieldPath\": \"week\", \"nullable\": true, \"description\": \"Reporting week\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"date\", \"recursive\": false, \"isPartOfKey\": false}, {\"fieldPath\": \"revenue\", \"nullable\": true, \"description\": \"Weekly revenue\", \"type\": {\"type\": {\"com.linkedin.schema.StringType\": {}}}, \"nativeDataType\": \"decimal\", \"recursive\": false, \"isPartOfKey\": false}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "browsePathsV2",
+    "aspect": {
+      "value": "{\"path\": [{\"id\": \"prod\"}, {\"id\": \"security-governance\"}, {\"id\": \"warehouse.public_revenue_summary\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "globalTags",
+    "aspect": {
+      "value": "{\"tags\": [{\"tag\": \"urn:li:tag:security_review\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "ownership",
+    "aspect": {
+      "value": "{\"owners\": [{\"owner\": \"urn:li:corpuser:bi_team\", \"type\": \"DATAOWNER\"}], \"ownerTypes\": {}, \"lastModified\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  },
+  {
+    "entityType": "dataset",
+    "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.public_revenue_summary,PROD)",
+    "changeType": "UPSERT",
+    "aspectName": "upstreamLineage",
+    "aspect": {
+      "value": "{\"upstreams\": [{\"auditStamp\": {\"time\": 0, \"actor\": \"urn:li:corpuser:unknown\"}, \"dataset\": \"urn:li:dataset:(urn:li:dataPlatform:postgres,warehouse.raw_orders,PROD)\", \"type\": \"TRANSFORMED\"}]}",
+      "contentType": "application/json"
+    },
+    "headers": {
+      "generated_at_epoch_ms": "1783428256845"
+    }
+  }
+]

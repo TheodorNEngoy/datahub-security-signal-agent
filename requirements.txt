@@ -1,0 +1,4 @@
+mcp-server-datahub==0.6.0
+datahub-agent-context==1.6.0.10
+duckdb==1.5.4
+fastapi==0.139.0
