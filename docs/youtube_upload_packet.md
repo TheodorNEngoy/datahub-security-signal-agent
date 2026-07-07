@@ -4,7 +4,7 @@ Use this for the required public demo video upload before pasting the final URL 
 
 ## File
 
-`/Users/theodornengoy/work/datahub-agenthack-2026-07-07/dist/datahub-security-signal-agent-demo.mp4`
+`dist/datahub-security-signal-agent-demo.mp4` in this local working tree.
 
 ## Title
 
